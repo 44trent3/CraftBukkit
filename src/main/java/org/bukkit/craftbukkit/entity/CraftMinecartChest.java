@@ -6,6 +6,7 @@ import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.craftbukkit.inventory.CraftInventory;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.StorageMinecart;
+import org.bukkit.entity.VehicleType;
 import org.bukkit.inventory.Inventory;
 
 @SuppressWarnings("deprecation")
@@ -28,5 +29,9 @@ public class CraftMinecartChest extends CraftMinecart implements StorageMinecart
 
     public EntityType getType() {
         return EntityType.MINECART_CHEST;
+    }
+
+    public VehicleType getVehicleType() {
+        return VehicleType.MINECART_CHEST;
     }
 }

@@ -4,6 +4,7 @@ import net.minecraft.server.EntityLeash;
 
 import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.HangingType;
 import org.bukkit.entity.LeashHitch;
 
 public class CraftLeash extends CraftHanging implements LeashHitch {
@@ -23,5 +24,10 @@ public class CraftLeash extends CraftHanging implements LeashHitch {
 
     public EntityType getType() {
         return EntityType.LEASH_HITCH;
+    }
+
+    @Override
+    public HangingType getHangingType() {
+        return HangingType.LEASH_HITCH;
     }
 }

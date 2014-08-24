@@ -1,9 +1,11 @@
 package org.bukkit.craftbukkit.entity;
 
 import net.minecraft.server.EntityBoat;
+
 import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.entity.Boat;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.VehicleType;
 
 public class CraftBoat extends CraftVehicle implements Boat {
 
@@ -59,5 +61,10 @@ public class CraftBoat extends CraftVehicle implements Boat {
 
     public EntityType getType() {
         return EntityType.BOAT;
+    }
+
+    @Override
+    public VehicleType getVehicleType() {
+        return VehicleType.BOAT;
     }
 }

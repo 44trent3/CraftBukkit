@@ -4,6 +4,7 @@ import net.minecraft.server.EntityMinecartAbstract;
 
 import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.VehicleType;
 import org.bukkit.entity.minecart.RideableMinecart;
 
 public class CraftMinecartRideable extends CraftMinecart implements RideableMinecart {
@@ -18,5 +19,10 @@ public class CraftMinecartRideable extends CraftMinecart implements RideableMine
 
     public EntityType getType() {
         return EntityType.MINECART;
+    }
+
+    @Override
+    public VehicleType getVehicleType() {
+        return VehicleType.MINECART;
     }
 }

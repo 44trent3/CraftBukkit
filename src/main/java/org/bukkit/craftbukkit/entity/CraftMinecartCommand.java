@@ -8,6 +8,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Server;
 import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.VehicleType;
 import org.bukkit.entity.minecart.CommandMinecart;
 import org.bukkit.permissions.PermissibleBase;
 import org.bukkit.permissions.Permission;
@@ -123,5 +124,10 @@ public class CraftMinecartCommand extends CraftMinecart implements CommandMineca
     @Override
     public Server getServer() {
         return Bukkit.getServer();
+    }
+
+    @Override
+    public VehicleType getVehicleType() {
+        return VehicleType.MINECART_COMMAND;
     }
 }

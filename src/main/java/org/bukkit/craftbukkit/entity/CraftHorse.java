@@ -1,12 +1,14 @@
 package org.bukkit.craftbukkit.entity;
 
 import net.minecraft.server.EntityHorse;
+
 import org.apache.commons.lang.Validate;
 import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.craftbukkit.inventory.CraftInventoryHorse;
 import org.bukkit.entity.AnimalTamer;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Horse;
+import org.bukkit.entity.VehicleType;
 import org.bukkit.inventory.HorseInventory;
 
 import java.util.UUID;
@@ -142,5 +144,9 @@ public class CraftHorse extends CraftAnimals implements Horse {
 
     public EntityType getType() {
         return EntityType.HORSE;
+    }
+
+    public VehicleType getVehicleType() {
+        return VehicleType.HORSE;
     }
 }

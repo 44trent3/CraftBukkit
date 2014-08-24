@@ -5,6 +5,7 @@ import net.minecraft.server.EntityMinecartHopper;
 import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.craftbukkit.inventory.CraftInventory;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.VehicleType;
 import org.bukkit.entity.minecart.HopperMinecart;
 import org.bukkit.inventory.Inventory;
 
@@ -27,5 +28,10 @@ final class CraftMinecartHopper extends CraftMinecart implements HopperMinecart 
 
     public Inventory getInventory() {
         return inventory;
+    }
+
+    @Override
+    public VehicleType getVehicleType() {
+        return VehicleType.MINECART_HOPPER;
     }
 }

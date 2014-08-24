@@ -4,13 +4,13 @@ import net.minecraft.server.EntityItemFrame;
 import net.minecraft.server.WorldServer;
 
 import org.apache.commons.lang.Validate;
-
 import org.bukkit.Rotation;
 import org.bukkit.block.BlockFace;
 import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.craftbukkit.CraftWorld;
 import org.bukkit.craftbukkit.inventory.CraftItemStack;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.HangingType;
 import org.bukkit.entity.ItemFrame;
 
 public class CraftItemFrame extends CraftHanging implements ItemFrame {
@@ -95,5 +95,10 @@ public class CraftItemFrame extends CraftHanging implements ItemFrame {
 
     public EntityType getType() {
         return EntityType.ITEM_FRAME;
+    }
+
+    @Override
+    public HangingType getHangingType() {
+        return HangingType.ITEM_FRAME;
     }
 }

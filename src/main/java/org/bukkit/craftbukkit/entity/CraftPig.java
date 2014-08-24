@@ -5,6 +5,7 @@ import net.minecraft.server.EntityPig;
 import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Pig;
+import org.bukkit.entity.VehicleType;
 
 public class CraftPig extends CraftAnimals implements Pig {
     public CraftPig(CraftServer server, EntityPig entity) {
@@ -30,5 +31,10 @@ public class CraftPig extends CraftAnimals implements Pig {
 
     public EntityType getType() {
         return EntityType.PIG;
+    }
+
+    @Override
+    public VehicleType getVehicleType() {
+        return VehicleType.PIG;
     }
 }

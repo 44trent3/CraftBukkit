@@ -4,6 +4,7 @@ import net.minecraft.server.EntityMinecartTNT;
 
 import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.VehicleType;
 import org.bukkit.entity.minecart.ExplosiveMinecart;
 
 final class CraftMinecartTNT extends CraftMinecart implements ExplosiveMinecart {
@@ -18,5 +19,10 @@ final class CraftMinecartTNT extends CraftMinecart implements ExplosiveMinecart 
 
     public EntityType getType() {
         return EntityType.MINECART_TNT;
+    }
+
+    @Override
+    public VehicleType getVehicleType() {
+        return VehicleType.MINECART_TNT;
     }
 }
