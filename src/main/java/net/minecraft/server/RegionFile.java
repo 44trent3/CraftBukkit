@@ -135,6 +135,7 @@ public class RegionFile {
                     int j1 = this.c.readInt();
 
                     if (j1 > 4096 * i1 || j1 <= 0) {
+                    	org.bukkit.Bukkit.getLogger().log(java.util.logging.Level.WARNING, "Invalid chunk: ({0}, {1}) Offset: {2} Invalid Size: {3}>{4} {5}", new Object[]{i, j, l, j1, i1 * 4096, this.b}); // Trent
                         return false;
                     }
 
