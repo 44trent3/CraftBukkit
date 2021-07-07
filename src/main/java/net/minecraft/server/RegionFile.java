@@ -230,7 +230,6 @@ public class RegionFile {
                 if (!ENABLE_EXTENDED_SAVE) return;
                 org.bukkit.Bukkit.getLogger().log(java.util.logging.Level.WARNING,"Large Chunk Detected: ({0}, {1}) Size: {2} {3}", new Object[]{i, j, k1, this.b});
                 // Trent end
-                return;
             }
 
             if (i1 != 0 && j1 == k1) {
