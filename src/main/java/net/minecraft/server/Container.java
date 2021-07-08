@@ -221,8 +221,11 @@ public abstract class Container {
                 if (i == -999) {
                     if (playerinventory.getCarried() != null && i == -999) {
                         if (j == 0) {
-                            entityhuman.drop(playerinventory.getCarried());
+                            // Trent start
+                        	ItemStack carried = playerinventory.getCarried();
                             playerinventory.setCarried((ItemStack) null);
+                            entityhuman.drop(carried);
+                            // Trent end
                         }
 
                         if (j == 1) {
