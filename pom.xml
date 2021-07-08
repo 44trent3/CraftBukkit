@@ -28,19 +28,19 @@
     <repository>
       <id>repobo-rel</id>
       <name>repo.bukkit.org Releases</name>
-      <url>http://repo.bukkit.org/content/repositories/releases/</url>
+      <url>http://repo.md-5.net/content/repositories/repobo-rel/</url>
     </repository>
     <snapshotRepository>
       <id>repobo-snap</id>
       <name>repo.bukkit.org Snapshots</name>
-      <url>http://repo.bukkit.org/content/repositories/snapshots/</url>
+      <url>http://repo.md-5.net/content/repositories/repobo-snap/</url>
     </snapshotRepository>
   </distributionManagement>
 
   <repositories>
     <repository>
       <id>repobo-snap</id>
-      <url>http://repo.bukkit.org/content/groups/public</url>
+      <url>http://repo.md-5.net/content/repositories/public/</url>
     </repository>
   </repositories>
 
