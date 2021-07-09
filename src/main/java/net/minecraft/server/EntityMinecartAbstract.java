@@ -203,10 +203,16 @@ public abstract class EntityMinecartAbstract extends Entity {
         if (this.getDamage() > 0.0F) {
             this.setDamage(this.getDamage() - 1.0F);
         }
-
+        
+        // Trent start
+        // Extracted to own function
+        /*
         if (this.locY < -64.0D) {
             this.C();
         }
+        */
+        this.checkAndDoHeightDamage();
+        // Trent end
 
         int i;
 

@@ -318,11 +318,17 @@ public abstract class Entity {
             this.A();
             this.fallDistance *= 0.5F;
         }
-
+        
+        // Trent start - nether ceiling damage
+        // Extracted to own function
+        /*
         if (this.locY < -64.0D) {
             this.C();
         }
-
+        */
+        this.checkAndDoHeightDamage();
+        // Trent end
+        
         if (!this.world.isStatic) {
             this.a(0, this.fireTicks > 0);
         }
@@ -330,6 +336,18 @@ public abstract class Entity {
         this.justCreated = false;
         this.world.methodProfiler.b();
     }
+    
+    // Trent start - top of the nether void damage
+    private boolean paperNetherCheck() {
+    	return this.world.getWorld().getEnvironment() == org.bukkit.World.Environment.NETHER && this.locY >= 128.0D;
+    }
+    
+    protected void checkAndDoHeightDamage() {
+    	if (this.locY < - 64.0D || paperNetherCheck()) {
+    		this.C();
+    	}
+    }
+    // Trent end
 
     public int z() {
         return 0;
@@ -398,7 +416,8 @@ public abstract class Entity {
         return !list.isEmpty() ? false : !this.world.containsLiquid(axisalignedbb);
     }
 
-    public void move(double d0, double d1, double d2) {
+    @SuppressWarnings("rawtypes")
+	public void move(double d0, double d1, double d2) {
         // CraftBukkit start - Don't do anything if we aren't moving
         if (d0 == 0 && d1 == 0 && d2 == 0 && this.vehicle == null && this.passenger == null) {
             return;
