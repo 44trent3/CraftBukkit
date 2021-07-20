@@ -149,6 +149,11 @@ public abstract class EntityMinecartContainer extends EntityMinecartAbstract imp
     }
 
     public void b(int i) {
+    	// Trent start
+    	for (HumanEntity h : transaction) {
+    		((org.bukkit.craftbukkit.entity.CraftHumanEntity) h).getHandle().closeInventory();
+    	}
+    	// Trent end
         this.b = false;
         super.b(i);
     }
